@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InfinitiLabQuiz", "InfinitiLabQuiz.csproj", "{087A513D-6F99-45C0-9FD5-3C44A494FBA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfinitiLabQuizTests", "..\InfinitiLabQuizTests\InfinitiLabQuizTests.csproj", "{C92828DD-EDDC-4F60-9BF5-731CC08FC55E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{087A513D-6F99-45C0-9FD5-3C44A494FBA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{087A513D-6F99-45C0-9FD5-3C44A494FBA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{087A513D-6F99-45C0-9FD5-3C44A494FBA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{087A513D-6F99-45C0-9FD5-3C44A494FBA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C92828DD-EDDC-4F60-9BF5-731CC08FC55E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C92828DD-EDDC-4F60-9BF5-731CC08FC55E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C92828DD-EDDC-4F60-9BF5-731CC08FC55E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C92828DD-EDDC-4F60-9BF5-731CC08FC55E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E65429B-4276-4768-9763-4753861A6B1B}
+	EndGlobalSection
+EndGlobal
