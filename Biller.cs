@@ -49,7 +49,6 @@ namespace InfinitiLabQuiz
 
             if (outstandingBills.Any(x => x.PaidDate != null && x.BillAmount - x.PaidAmount != 0))
                 throw new Exception(ErrorMessageBiller.OutstandingBills_HasPaidDate);
-
         }
     }
 }
