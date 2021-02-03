@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace InfinitiLabQuiz.Models
 {
@@ -47,16 +45,5 @@ namespace InfinitiLabQuiz.Models
             get { return _paidDate; }
             set { _paidDate = value; }
         }
-
-        //public Bill(Guid customerId, DateTime billDate, decimal billAmount)
-        //{
-        //    this.Id = Guid.NewGuid();
-        //    this.CustomerId = customerId;
-        //    this.BillDate = billDate;
-        //    this.BillAmount = billAmount;
-        //    this.PaidAmount = 0;
-        //    this.PaidDate = null;
-        //}       
-
     }
 }

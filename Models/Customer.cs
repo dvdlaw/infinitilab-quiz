@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace InfinitiLabQuiz.Models
+﻿namespace InfinitiLabQuiz.Models
 {
     public class Customer
     {
