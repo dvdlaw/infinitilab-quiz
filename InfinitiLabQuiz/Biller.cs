@@ -14,6 +14,7 @@ namespace InfinitiLabQuiz
             return Process(outstandingBills, amountToMatch);
         }
 
+        //main logic
         private IEnumerable<int> Process(List<Bill> outstandingBills, decimal amountToMatch)
         {
             List<int> result = new List<int>();
