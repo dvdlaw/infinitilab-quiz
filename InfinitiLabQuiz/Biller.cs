@@ -13,8 +13,7 @@ namespace InfinitiLabQuiz
             Validate(outstandingBills, amountToMatch);
             return Process(outstandingBills, amountToMatch);
         }
-
-        //main logic
+        
         private IEnumerable<int> Process(List<Bill> outstandingBills, decimal amountToMatch)
         {
             List<int> result = new List<int>();
@@ -22,20 +21,40 @@ namespace InfinitiLabQuiz
 
             foreach (int customerId in customerIds)
             {
-                decimal totalBillAmount = outstandingBills.Where(x => x.CustomerId == customerId)
-                                                .Select(x => x.BillAmount)
-                                                .Sum();
+                List<decimal> outstandingAmounts = outstandingBills.Where(x => x.CustomerId == customerId)
+                                                            .Select(x => x.BillAmount - x.PaidAmount)
+                                                            .ToList();
 
-                decimal totalPaidAmount = outstandingBills.Where(x => x.CustomerId == customerId)
-                                                .Select(x => x.PaidAmount)
-                                                .Sum();
-
-                if (totalBillAmount - totalPaidAmount == amountToMatch)
+                if (HasPossibleMatchingSumOrIndividualAmount(outstandingAmounts, amountToMatch))
                     result.Add(customerId);
             }
 
             return result;
         }
+
+        //main logic
+        private bool HasPossibleMatchingSumOrIndividualAmount(List<decimal> outstandingAmounts, decimal amountToMatch)
+        {
+            for (int i=0; i < outstandingAmounts.Count; i++)
+            {
+                decimal left = amountToMatch - outstandingAmounts[i];
+                
+                if(left == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    List<decimal> possible = outstandingAmounts.Skip(i+1).Where(x => x <= left).ToList();
+                    if (possible.Count > 0)
+                    {
+                        return HasPossibleMatchingSumOrIndividualAmount(possible, left);
+                    }
+                }
+            }
+            return false;
+        }
+
 
         private void Validate(List<Bill> outstandingBills, decimal amountToMatch)
         {
